@@ -1,4 +1,9 @@
-#Simple Password Generator
+#Simple Password Generator created by Kushal Sharma Bastakoti
+#Contact me on instagram at kushal.bastakoti
+
+#You can customize the weight,ratio and number of digits by just editing some values below 
+
+
 
 import numpy as np
 import random as rm 
