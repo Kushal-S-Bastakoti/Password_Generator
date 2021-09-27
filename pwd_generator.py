@@ -40,11 +40,16 @@ elif len(sys.argv) == 5:
     weight_string   =   int(sys.argv[2])
     weight_number   =   int(sys.argv[3])
     weight_symbols  =   int(sys.argv[4])
+<<<<<<< HEAD
 else:
     print("Invalid number of Arguments")
     exit(0)
 
 
+=======
+
+
+>>>>>>> b61b0ebe21388702d0279a1a3c856f1d7d19928d
 ratio_total     =   weight_number+weight_string+weight_symbols
 ratio_string    =   (int) (word_count * weight_string)/ ratio_total
 ratio_numbers   =   (int) (word_count * weight_number)/ratio_total
@@ -86,6 +91,13 @@ while(password.size < word_count):
     if(dict1[a] != 0 ):
         password = np.append(password,a)
         dict1[a] -= 1
+<<<<<<< HEAD
+=======
+
+
+print (raw_password)
+print (password)
+>>>>>>> b61b0ebe21388702d0279a1a3c856f1d7d19928d
 
 
 print("".join(password))
