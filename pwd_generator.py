@@ -28,33 +28,36 @@ symbol_list =   np.array(['!','@','#','$','%','^','&','*'])
 
 #for 16 digits take 60% digits string, take 25% numbers and 15 % symbols; 
 #Defalut Values
-word_count      =   16
-weight_string   =   60
-weight_number   =   25
-weight_symbols  =   15
+if len(sys.argv) == 1:
+    word_count      =   16
+    weight_string   =   60
+    weight_number   =   25
+    weight_symbols  =   15
 
-if len(sys.argv) == 2 :
+elif len(sys.argv) == 2 :
     word_count      =   int(sys.argv[1])
 elif len(sys.argv) == 5:
     word_count      =   int(sys.argv[1])
     weight_string   =   int(sys.argv[2])
     weight_number   =   int(sys.argv[3])
     weight_symbols  =   int(sys.argv[4])
-<<<<<<< HEAD
 else:
     print("Invalid number of Arguments")
     exit(0)
 
 
-=======
-
-
->>>>>>> b61b0ebe21388702d0279a1a3c856f1d7d19928d
 ratio_total     =   weight_number+weight_string+weight_symbols
-ratio_string    =   (int) (word_count * weight_string)/ ratio_total
-ratio_numbers   =   (int) (word_count * weight_number)/ratio_total
-ratio_symbols   =   (int) (word_count * weight_symbols)/ratio_total
 
+if ratio_total == word_count:
+    ratio_string = weight_string
+    ratio_numbers = weight_number
+    ratio_symbols = weight_symbols
+else:
+    ratio_string    =    (word_count * weight_string)/ ratio_total
+    ratio_numbers   =    (word_count * weight_number)/ratio_total
+    ratio_symbols   =    (word_count * weight_symbols)/ratio_total
+
+#print("    ",ratio_string,"   ",ratio_numbers,"   ",ratio_symbols)
 
 #Code for filling in any gaps that occured when creating integer ratios
 while (ratio_numbers + ratio_string + ratio_symbols < word_count):
@@ -91,13 +94,10 @@ while(password.size < word_count):
     if(dict1[a] != 0 ):
         password = np.append(password,a)
         dict1[a] -= 1
-<<<<<<< HEAD
-=======
 
 
-print (raw_password)
-print (password)
->>>>>>> b61b0ebe21388702d0279a1a3c856f1d7d19928d
+# print (raw_password)
+# print (password)
 
 
 print("".join(password))
