@@ -36,6 +36,9 @@ if len(sys.argv) == 1:
 
 elif len(sys.argv) == 2 :
     word_count      =   int(sys.argv[1])
+    weight_string   =   60
+    weight_number   =   25
+    weight_symbols  =   15
 elif len(sys.argv) == 5:
     word_count      =   int(sys.argv[1])
     weight_string   =   int(sys.argv[2])
